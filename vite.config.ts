@@ -10,11 +10,11 @@ export default defineConfig({
       input: {
         main: "index.html",
         dashboard: "src/dashboard-entry.tsx",
-        navigation: "src/navigation-entry.tsx",
+        navigation: "src/navigation-entry.tsx"
       },
       output: {
-        entryFileNames: "assets/[name].[hash].js",
-      },
-    },
-  },
+        entryFileNames: "assets/[name].[hash].js"
+      }
+    }
+  }
 });

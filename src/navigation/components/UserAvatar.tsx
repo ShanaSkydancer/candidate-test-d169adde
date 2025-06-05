@@ -12,7 +12,7 @@ export const UserAvatar = () => {
   const statusLabels: Record<WorkStatus, string> = {
     looking: "Currently looking for work",
     passive: "Passively looking for work",
-    not_looking: "Don't want to hear about work",
+    not_looking: "Don't want to hear about work"
   };
 
   const handleStatusChange = (status: WorkStatus) => {

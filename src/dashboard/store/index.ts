@@ -3,8 +3,8 @@ import userReducer from "./userSlice";
 
 export const dashboardStore = configureStore({
   reducer: {
-    user: userReducer,
-  },
+    user: userReducer
+  }
 });
 
 export type DashboardRootState = ReturnType<typeof dashboardStore.getState>;

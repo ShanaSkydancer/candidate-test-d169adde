@@ -5,7 +5,7 @@ import { UserAvatar } from "./UserAvatar";
 const dispatchNavEvent = (path: string) => {
   // Create a custom event that can be listened to by other micro-frontends
   const event = new CustomEvent("navigation-change", {
-    detail: { path },
+    detail: { path }
   });
   window.dispatchEvent(event);
 };

@@ -3,8 +3,8 @@ import userReducer from "./userSlice";
 
 export const navStore = configureStore({
   reducer: {
-    user: userReducer,
-  },
+    user: userReducer
+  }
 });
 
 export type NavRootState = ReturnType<typeof navStore.getState>;

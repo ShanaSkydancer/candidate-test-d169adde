@@ -1,17 +1,17 @@
 type RecentJob = {
-  id: number
-  title: string
-  company: string
-  rate: string
-  postedDate: string
-  match: string
-}
+  id: number;
+  title: string;
+  company: string;
+  rate: string;
+  postedDate: string;
+  match: string;
+};
 
-type RecentJobsList = RecentJob[]
+type RecentJobsList = RecentJob[];
 
 type RecentJobsProps = {
-  className?: string
-}
+  className?: string;
+};
 
 export const RecentJobs = ({ className = "" }: RecentJobsProps) => {
   const recentJobs: RecentJobsList = [
@@ -21,7 +21,7 @@ export const RecentJobs = ({ className = "" }: RecentJobsProps) => {
       company: "TechCorp Inc.",
       rate: "$75/hr",
       postedDate: "2 days ago",
-      match: "95%",
+      match: "95%"
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ export const RecentJobs = ({ className = "" }: RecentJobsProps) => {
       company: "DesignStudio",
       rate: "$65/hr",
       postedDate: "3 days ago",
-      match: "87%",
+      match: "87%"
     },
     {
       id: 3,
@@ -37,8 +37,8 @@ export const RecentJobs = ({ className = "" }: RecentJobsProps) => {
       company: "CreativeAgency",
       rate: "$70/hr",
       postedDate: "1 week ago",
-      match: "82%",
-    },
+      match: "82%"
+    }
   ];
 
   return (

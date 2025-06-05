@@ -5,8 +5,8 @@ import { WorkStatus } from "../../shared/types";
 import { ChangeEvent } from "react";
 
 type WorkStatusCardProps = {
-  className?: string
-}
+  className?: string;
+};
 
 export const WorkStatusCard = ({ className = "" }: WorkStatusCardProps) => {
   const { profile } = useSelector((state: DashboardRootState) => state.user);
@@ -15,7 +15,7 @@ export const WorkStatusCard = ({ className = "" }: WorkStatusCardProps) => {
   const statusLabels: Record<WorkStatus, string> = {
     looking: "Currently looking for work",
     passive: "Passively looking for work",
-    not_looking: "Don't want to hear about work",
+    not_looking: "Don't want to hear about work"
   };
 
   const handleStatusChange = (e: ChangeEvent<HTMLSelectElement>) => {

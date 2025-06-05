@@ -1,14 +1,14 @@
-import {JSX, useEffect, useRef} from "react";
+import { JSX, useEffect, useRef } from "react";
 import { Navigate } from "react-router-dom";
 import { Dashboard } from "../dashboard/components/Dashboard";
 import toast from "react-hot-toast";
 
 type Route = {
-  path: string
-  element: JSX.Element
-}
+  path: string;
+  element: JSX.Element;
+};
 
-type Routes = Route[]
+type Routes = Route[];
 
 // Toast ID to prevent duplicates
 const NOT_IMPLEMENTED_TOAST_ID = "not-implemented-toast";
@@ -46,30 +46,30 @@ export const NotImplemented = () => {
 export const routes: Routes = [
   {
     path: "/",
-    element: <Dashboard />,
+    element: <Dashboard />
   },
   {
     path: "/jobs",
-    element: <NotImplemented />,
+    element: <NotImplemented />
   },
   {
     path: "/contracts",
-    element: <NotImplemented />,
+    element: <NotImplemented />
   },
   {
     path: "/timesheets",
-    element: <NotImplemented />,
+    element: <NotImplemented />
   },
   {
     path: "/invoices",
-    element: <NotImplemented />,
+    element: <NotImplemented />
   },
   {
     path: "/payments",
-    element: <NotImplemented />,
+    element: <NotImplemented />
   },
   {
     path: "*",
-    element: <NotImplemented />,
-  },
+    element: <NotImplemented />
+  }
 ];

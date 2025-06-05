@@ -7,7 +7,7 @@ export interface UserState {
 }
 
 const initialState: UserState = {
-  profile: mockUser,
+  profile: mockUser
 };
 
 export const userSlice = createSlice({
@@ -16,8 +16,8 @@ export const userSlice = createSlice({
   reducers: {
     updateWorkStatus: (state, action: PayloadAction<WorkStatus>) => {
       state.profile.workStatus = action.payload;
-    },
-  },
+    }
+  }
 });
 
 export const { updateWorkStatus } = userSlice.actions;
