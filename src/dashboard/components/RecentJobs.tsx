@@ -1,5 +1,20 @@
-export const RecentJobs = ({ className = "" }: { className?: string }) => {
-  const recentJobs = [
+type RecentJob = {
+  id: number
+  title: string
+  company: string
+  rate: string
+  postedDate: string
+  match: string
+}
+
+type RecentJobsList = RecentJob[]
+
+type RecentJobsProps = {
+  className?: string
+}
+
+export const RecentJobs = ({ className = "" }: RecentJobsProps) => {
+  const recentJobs: RecentJobsList = [
     {
       id: 1,
       title: "Senior React Developer",

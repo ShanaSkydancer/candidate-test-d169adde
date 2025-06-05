@@ -5,6 +5,10 @@ import { routes } from "./shared/routes";
 import { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
 
+type NavEvent = {
+    path: string
+}
+
 // Create a root-level div to provide proper styling context
 const dashboardRoot = document.getElementById("dashboard-root");
 
@@ -14,7 +18,7 @@ const NavigationListener = () => {
 
   useEffect(() => {
     // Event handler for navigation events from the navigation micro-frontend
-    const handleNavEvent = (event: CustomEvent<{ path: string }>) => {
+    const handleNavEvent = (event: CustomEvent<NavEvent>) => {
       navigate(event.detail.path);
     };
 

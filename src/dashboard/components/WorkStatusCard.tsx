@@ -4,7 +4,11 @@ import { updateWorkStatus } from "../store/userSlice";
 import { WorkStatus } from "../../shared/types";
 import { ChangeEvent } from "react";
 
-export const WorkStatusCard = ({ className = "" }: { className?: string }) => {
+type WorkStatusCardProps = {
+  className?: string
+}
+
+export const WorkStatusCard = ({ className = "" }: WorkStatusCardProps) => {
   const { profile } = useSelector((state: DashboardRootState) => state.user);
   const dispatch = useDispatch<DashboardDispatch>();
 
