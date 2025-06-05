@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { DashboardRootState, DashboardDispatch } from "../store";
 import { updateWorkStatus } from "../store/userSlice";
 import { WorkStatus } from "../../shared/types";
+import { ChangeEvent } from "react";
 
 export const WorkStatusCard = ({ className = "" }: { className?: string }) => {
   const { profile } = useSelector((state: DashboardRootState) => state.user);
@@ -13,7 +14,7 @@ export const WorkStatusCard = ({ className = "" }: { className?: string }) => {
     not_looking: "Don't want to hear about work",
   };
 
-  const handleStatusChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleStatusChange = (e: ChangeEvent<HTMLSelectElement>) => {
     dispatch(updateWorkStatus(e.target.value as WorkStatus));
   };
 
