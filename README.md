@@ -1,6 +1,6 @@
 # 🥼 YunoJuno Frontend Candidate Test (FreelancerHub)
 
-Hi! First of all, thank you for applying and we appreciate you taking
+Hi! First of all, thank you for applying, and we appreciate you taking
 the time to do this. We generally say 3-4hrs should be enough.
 
 ### 👋 Introduction
@@ -56,13 +56,13 @@ Simply fix it, so that it works.
 ### Getting Started
 
 1. Fork the repository<sup>☨</sup>.
-1. Clone it locally & setup the environment.
-1. Install dependencies:
-   ```
+2. Clone it locally & setup the environment.
+3. Install dependencies:
+    ```
    npm install
    ```
-1. Start the development server:
-   ```
+4. Start the development server:
+    ```
    npm run dev
    ```
 
@@ -77,6 +77,6 @@ same room as them over the internet. This is definitely something we pay
 attention to and expect on the job.
 
 1. Make your code changes.
-1. Push to your fork.
-1. Open a Pull Request against this repo, and describe your change.
-1. Confirm with us that you have done so, stating your GitHub username.
+2. Push to your fork.
+3. Open a Pull Request against this repo, and describe your change.
+4. Confirm with us that you have done so, stating your GitHub username.
