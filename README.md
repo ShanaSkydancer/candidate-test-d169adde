@@ -80,3 +80,7 @@ attention to and expect on the job.
 2. Push to your fork.
 3. Open a Pull Request against this repo, and describe your change.
 4. Confirm with us that you have done so, stating your GitHub username.
+
+### ➡️ Candidate Notes
+
+See [README-Charne.md](./README-Charne.md) for my notes and implementation details.
