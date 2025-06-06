@@ -1,26 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Dispatch, RootState } from "../../shared/store";
 import { updateWorkStatus } from "../../shared/store/userSlice.ts";
-import { statusLabels, WorkStatus } from "../../shared/types";
+import { colourStyle, statusLabels, WorkStatus } from "../../shared/types";
 
 type WorkStatusCardProps = {
   className?: string;
-};
-
-type colourStyleType = {
-  selected: string;
-};
-
-const colourStyle: Record<WorkStatus, colourStyleType> = {
-  looking: {
-    selected: "border-green-600 bg-green-50 text-green-800"
-  },
-  passive: {
-    selected: "border-yellow-500 bg-yellow-50 text-yellow-800"
-  },
-  not_looking: {
-    selected: "border-red-600 bg-red-50 text-red-800"
-  }
 };
 
 export const WorkStatusCard = ({ className = "" }: WorkStatusCardProps) => {

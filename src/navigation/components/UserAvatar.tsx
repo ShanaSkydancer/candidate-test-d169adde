@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { RootState, Dispatch } from "../../shared/store";
 import { updateWorkStatus } from "../../shared/store/userSlice.ts";
-import { statusLabels, WorkStatus } from "../../shared/types";
+import { colourStyle, statusLabels, WorkStatus } from "../../shared/types";
 import { useState } from "react";
 
 const statusColours: Record<WorkStatus, string> = {
@@ -41,28 +41,27 @@ export const UserAvatar = () => {
       </div>
 
       {dropdownOpen && (
-        <ul className="absolute bottom-full mb-4 left-0 bg-white shadow-lg rounded border w-auto">
+        <ul className="absolute bottom-full mb-4 left-0 bg-white shadow-lg rounded border border-gray-300 w-auto">
           <h4 className="text-sm font-bold px-3 py-2 text-gray-700 mb-2">
             Update your work status:
           </h4>
-          <li
-            onClick={() => handleStatusChange("looking")}
-            className="text-sm px-3 py-2 hover:bg-gray-100 rounded cursor-pointer"
-          >
-            Currently looking for work
-          </li>
-          <li
-            onClick={() => handleStatusChange("passive")}
-            className="text-sm px-3 py-2 hover:bg-gray-100 rounded cursor-pointer"
-          >
-            Passively looking for work
-          </li>
-          <li
-            onClick={() => handleStatusChange("not_looking")}
-            className="text-sm px-3 py-2 hover:bg-gray-100 rounded cursor-pointer"
-          >
-            Don't want to hear about work
-          </li>
+          {(Object.keys(statusLabels) as WorkStatus[]).map((status) => {
+            const isSelected = profile.workStatus === status;
+
+            return (
+              <li
+                key={status}
+                onClick={() => handleStatusChange(status)}
+                className={`text-sm px-3 py-2 rounded cursor-pointer flex items-center gap-2 ${
+                  isSelected
+                    ? colourStyle[status].selected
+                    : "hover:bg-gray-100 text-gray-700"
+                }`}
+              >
+                {statusLabels[status]}
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>
