@@ -1,19 +1,19 @@
 import { useSelector, useDispatch } from "react-redux";
 import { RootState, Dispatch } from "../../shared/store";
 import { updateWorkStatus } from "../../shared/store/userSlice.ts";
-import { WorkStatus } from "../../shared/types";
+import { statusLabels, WorkStatus } from "../../shared/types";
 import { useState } from "react";
+
+const statusColours: Record<WorkStatus, string> = {
+  looking: "🟢",
+  passive: "🟡",
+  not_looking: "🔴"
+};
 
 export const UserAvatar = () => {
   const { profile } = useSelector((state: RootState) => state.user);
   const dispatch = useDispatch<Dispatch>();
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  const statusLabels: Record<WorkStatus, string> = {
-    looking: "Currently looking for work",
-    passive: "Passively looking for work",
-    not_looking: "Don't want to hear about work"
-  };
 
   const handleStatusChange = (status: WorkStatus) => {
     dispatch(updateWorkStatus(status));
@@ -34,6 +34,7 @@ export const UserAvatar = () => {
         <div className="flex flex-col">
           <span className="font-medium text-sm">{profile.name}</span>
           <span className="text-xs text-gray-600">
+            {statusColours[profile.workStatus]}{" "}
             {statusLabels[profile.workStatus]}
           </span>
         </div>
