@@ -12,7 +12,7 @@ Hello! Thank you for taking the time to review my coding task. Please see below 
 2. Improve the usability/design of the dashboard availability component
 - For this I removed the dropdown and implemented a radio button selector. A radio button is a better choice for a small list - it's considered best practice to use a radio button vs a dropdown when you have less than 5 options.
 - I styled the component and based the selection colour off of the three options - green for `current`, yellow for `passive` and red for `not_looking`.
-- I removed the "Your current status:" text and value as it seemed redundant and unecessary in the UI.
+- I removed the "Your current status:" text and value as it seemed redundant and unnecessary in the UI.
 - In addition, I added a coloured icon to the Avatar component so it matches the colours of the selected radio button. This works visually with the changes to the radio button.
 
 3. Fix the navigation's availability update component
