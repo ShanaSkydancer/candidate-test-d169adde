@@ -9,21 +9,17 @@ type WorkStatusCardProps = {
 
 type colourStyleType = {
   selected: string;
-  hover: string;
 };
 
 const colourStyle: Record<WorkStatus, colourStyleType> = {
   looking: {
-    selected: "border-green-600 bg-green-50 text-green-800",
-    hover: "hover:border-green-400 hover:bg-green-50"
+    selected: "border-green-600 bg-green-50 text-green-800"
   },
   passive: {
-    selected: "border-yellow-500 bg-yellow-50 text-yellow-800",
-    hover: "hover:border-yellow-400 hover:bg-yellow-50"
+    selected: "border-yellow-500 bg-yellow-50 text-yellow-800"
   },
   not_looking: {
-    selected: "border-red-600 bg-red-50 text-red-800",
-    hover: "hover:border-red-400 hover:bg-red-50"
+    selected: "border-red-600 bg-red-50 text-red-800"
   }
 };
 
@@ -50,7 +46,7 @@ export const WorkStatusCard = ({ className = "" }: WorkStatusCardProps) => {
               const selected = profile.workStatus === value;
               const selectedStyles = selected
                 ? colourStyle[value].selected
-                : `border-gray-300 text-gray-700 ${colourStyle[value].hover}`;
+                : "border-gray-300 text-gray-700 hover:bg-gray-100";
 
               return (
                 <label
