@@ -1,10 +1,10 @@
 import { Provider } from "react-redux";
-import { navStore } from "./store";
+import { store } from "../shared/store";
 import { Navigation } from "./components/Navigation";
 
 export const NavigationApp = () => {
   return (
-    <Provider store={navStore}>
+    <Provider store={store}>
       <Navigation />
     </Provider>
   );

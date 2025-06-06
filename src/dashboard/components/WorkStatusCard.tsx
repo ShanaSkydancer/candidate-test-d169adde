@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
-import { DashboardRootState, DashboardDispatch } from "../store";
-import { updateWorkStatus } from "../store/userSlice";
+import { Dispatch, RootState } from "../../shared/store";
+import { updateWorkStatus } from "../../shared/store/userSlice.ts";
 import { WorkStatus } from "../../shared/types";
 import { ChangeEvent } from "react";
 
@@ -9,8 +9,8 @@ type WorkStatusCardProps = {
 };
 
 export const WorkStatusCard = ({ className = "" }: WorkStatusCardProps) => {
-  const { profile } = useSelector((state: DashboardRootState) => state.user);
-  const dispatch = useDispatch<DashboardDispatch>();
+  const { profile } = useSelector((state: RootState) => state.user);
+  const dispatch = useDispatch<Dispatch>();
 
   const statusLabels: Record<WorkStatus, string> = {
     looking: "Currently looking for work",

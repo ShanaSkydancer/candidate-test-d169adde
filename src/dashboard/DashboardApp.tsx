@@ -1,10 +1,10 @@
 import { Provider } from "react-redux";
-import { dashboardStore } from "./store";
+import { store } from "../shared/store";
 import { Dashboard } from "./components/Dashboard";
 
 export const DashboardApp = () => {
   return (
-    <Provider store={dashboardStore}>
+    <Provider store={store}>
       <Dashboard />
     </Provider>
   );

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { UserProfile, WorkStatus } from "../../shared/types";
-import { mockUser } from "../../shared/models/mockData";
+import { UserProfile, WorkStatus } from "../types";
+import { mockUser } from "../models/mockData.ts";
 
 export interface UserState {
   profile: UserProfile;
@@ -11,7 +11,7 @@ const initialState: UserState = {
 };
 
 export const userSlice = createSlice({
-  name: "navUser",
+  name: "user",
   initialState,
   reducers: {
     updateWorkStatus: (state, action: PayloadAction<WorkStatus>) => {

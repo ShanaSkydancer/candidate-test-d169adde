@@ -1,12 +1,12 @@
 import { Provider } from "react-redux";
-import { dashboardStore } from "../store";
+import { store } from "../../shared/store";
 import { WorkStatusCard } from "./WorkStatusCard";
 import { StatsSummary } from "./StatsSummary";
 import { RecentJobs } from "./RecentJobs";
 
 export const Dashboard = () => {
   return (
-    <Provider store={dashboardStore}>
+    <Provider store={store}>
       <div className="p-8">
         <header className="mb-8">
           <h1 className="text-2xl mb-2">Welcome to your Dashboard</h1>

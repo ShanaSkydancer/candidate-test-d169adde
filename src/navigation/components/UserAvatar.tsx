@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
-import { NavRootState, NavDispatch } from "../store";
-import { updateWorkStatus } from "../store/userSlice";
+import { RootState, Dispatch } from "../../shared/store";
+import { updateWorkStatus } from "../../shared/store/userSlice.ts";
 import { WorkStatus } from "../../shared/types";
 import { useState } from "react";
 
 export const UserAvatar = () => {
-  const { profile } = useSelector((state: NavRootState) => state.user);
-  const dispatch = useDispatch<NavDispatch>();
+  const { profile } = useSelector((state: RootState) => state.user);
+  const dispatch = useDispatch<Dispatch>();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const statusLabels: Record<WorkStatus, string> = {
