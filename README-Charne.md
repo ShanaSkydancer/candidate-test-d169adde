@@ -16,4 +16,6 @@ Hello! Thank you for taking the time to review my coding task. Please see below 
 - In addition, I added a coloured icon to the Avatar component so it matches the colours of the selected radio button. This works visually with the changes to the radio button.
 
 3. Fix the navigation's availability update component
-
+- For this I just needed to change the styling of the `UseAvatar` component.
+- To move the list above the avatar, I changed the `top-full` of the unordered list (container for the list items) to `bottom-full`. This moved the list container above. 
+- I changed the margin top to be margin bottom, this gives it more space upwards and added a little more padding.

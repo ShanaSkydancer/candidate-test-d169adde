@@ -21,7 +21,7 @@ export const UserAvatar = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative inline-block">
       <div
         className="flex items-center gap-3 cursor-pointer"
         onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -41,31 +41,29 @@ export const UserAvatar = () => {
       </div>
 
       {dropdownOpen && (
-        <div className="absolute top-full mt-2 right-0 bg-white shadow-lg rounded-md p-4 w-64 z-10 border border-gray-200">
-          <h4 className="text-sm font-medium text-gray-700 mb-2">
+        <ul className="absolute bottom-full mb-4 left-0 bg-white shadow-lg rounded border w-auto">
+          <h4 className="text-sm font-bold px-3 py-2 text-gray-700 mb-2">
             Update your work status:
           </h4>
-          <ul className="space-y-2">
-            <li
-              onClick={() => handleStatusChange("looking")}
-              className="text-sm py-1.5 px-2 hover:bg-gray-100 rounded cursor-pointer"
-            >
-              Currently looking for work
-            </li>
-            <li
-              onClick={() => handleStatusChange("passive")}
-              className="text-sm py-1.5 px-2 hover:bg-gray-100 rounded cursor-pointer"
-            >
-              Passively looking for work
-            </li>
-            <li
-              onClick={() => handleStatusChange("not_looking")}
-              className="text-sm py-1.5 px-2 hover:bg-gray-100 rounded cursor-pointer"
-            >
-              Don't want to hear about work
-            </li>
-          </ul>
-        </div>
+          <li
+            onClick={() => handleStatusChange("looking")}
+            className="text-sm px-3 py-2 hover:bg-gray-100 rounded cursor-pointer"
+          >
+            Currently looking for work
+          </li>
+          <li
+            onClick={() => handleStatusChange("passive")}
+            className="text-sm px-3 py-2 hover:bg-gray-100 rounded cursor-pointer"
+          >
+            Passively looking for work
+          </li>
+          <li
+            onClick={() => handleStatusChange("not_looking")}
+            className="text-sm px-3 py-2 hover:bg-gray-100 rounded cursor-pointer"
+          >
+            Don't want to hear about work
+          </li>
+        </ul>
       )}
     </div>
   );
