@@ -19,3 +19,14 @@ Hello! Thank you for taking the time to review my coding task. Please see below 
 - For this I just needed to change the styling of the `UseAvatar` component.
 - To move the list above the avatar, I changed the `top-full` of the unordered list (container for the list items) to `bottom-full`. This moved the list container above. 
 - I changed the margin top to be margin bottom, this gives it more space upwards and added a little more padding.
+
+### Side note
+
+- Ideally I would try to avoid such a big PR. I would make a PR for the smallest slice possible and get it ready for a code review, to go into `main` as soon as possible. I like to keep the surface of change small and, in combination with feature flags, I can commit to Production as often as possible.
+- I would also add or add to the test coverage. Having tests is really important, and they give you the confidence to make changes and refactor code but also gives you more insight into the code itself - it's like another form of documentation. If testing had been set up in the repo, I would have added a test that, given I am on the dashboard, when I change the work status, then I expect that the status also changes in the avatar component.
+- I added Prettier, as well as incorporate it into ESLint. This follows the rules of bracket spacing and double quotes already implemented in the code and ensures and enforces a code style and structure throughout. You can run it for fix any errors/warnings:
+   ```
+   npm run lint:fix
+   ```
+- I tried to follow the spec and give clear documentation. I hope it comes across that way.
+- Thank you again for taking the time to review this tech task! :)

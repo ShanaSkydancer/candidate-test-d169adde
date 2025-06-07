@@ -58,11 +58,11 @@ Simply fix it, so that it works.
 1. Fork the repository<sup>☨</sup>.
 2. Clone it locally & setup the environment.
 3. Install dependencies:
-    ```
+   ```
    npm install
    ```
 4. Start the development server:
-    ```
+   ```
    npm run dev
    ```
 
